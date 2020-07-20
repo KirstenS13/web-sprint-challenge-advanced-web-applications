@@ -33,11 +33,11 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 2. What steps can you take in your web apps to keep your data secure?
 
-    Authentication can be added so that users require a token in order to access certain parts of the web app. This would ensure that only users who are authenticated can access certain data.
+    Authentication can be added so that users must have a token in order to access certain parts of the web app. This would ensure that only users who are authenticated can access certain data.
 
 3. Describe how web servers work.
 
-    Web servers receive requests from clients and fulfill them. The servers can send the clients tokens and data and can update, delete, or add data to themselves based on what the client requests.
+    Web servers receive requests from clients and fulfill them. The servers can send the clients tokens and data and can update, delete, or add data to themselves based on what the client requests. For example, if a client sends the correct login credentials to a server and requests access the server will send back a token that the client can use to access protected data.
 
 4. Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
 
