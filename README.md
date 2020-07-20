@@ -28,9 +28,20 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain what a token is used for.
+
+    A token is used for client-side authentication. It lets the server know that the client is allowed to access data that requires authentication.
+
 2. What steps can you take in your web apps to keep your data secure?
+
+    Authentication can be added so that users require a token in order to access certain parts of the web app. This would ensure that only users who are authenticated can access certain data.
+
 3. Describe how web servers work.
+
+    Web servers receive requests from clients and fulfill them. The servers can send the clients tokens and data and can update, delete, or add data to themselves based on what the client requests.
+
 4. Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+    The "post" method corresponds to the "C", or the "create", in CRUD because it is the method used to add data to the API/Server. The "get" method corresponds to the "R", or the "read", because it is used to fetch data without adding, changing, or removing anything from the API/Server. The "U", or the "update", in CRUD corresponds to the "put" method because that method changes existing data in the API/Server. The "D", or the "delete" in CRUD corresponds to the "delete" method because that method deletes data from the API/Server.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
