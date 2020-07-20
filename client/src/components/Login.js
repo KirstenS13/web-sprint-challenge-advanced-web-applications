@@ -26,6 +26,7 @@ const Login = () => {
           password: ""
         });
         localStorage.setItem("token", res.data.payload);
+        push("/bubble-page");
       })
       .catch(err => {
         console.log(err);
