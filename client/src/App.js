@@ -8,15 +8,34 @@ import "./styles.scss";
 
 //stretch
 import About from './components/About';
+import Contact from './components/Contact';
+import styled from 'styled-components';
+
+const Div = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+
+    background-color: ${props => props.primary ? "transparent" : "thistle" };
+`;
+
+const Nav = styled.nav`
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 20px auto;
+`
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <nav className="navbar">
-          <Link to="/about">About Us</Link>
-          <Link to="/bubble-page">Your Bubbles</Link>
-        </nav>
+      <Div primary className="App">
+        <Nav className="navbar">
+          <Link to="/about" style={{ textDecoration: "none" }}>About Us</Link>
+          <Link to="/contact" style={{ textDecoration: "none" }}>Contact Us</Link>
+          <Link to="/bubble-page" style={{ textDecoration: "none" }}>Your Bubbles</Link>
+        </Nav>
         <Route exact path="/" component={Login} />
         {/* 
           Build a PrivateRoute component that will 
@@ -25,7 +44,8 @@ function App() {
         <PrivateRoute path="/bubble-page" component={BubblePage} />
         {/* stretch goal */}
         <Route path="/about" component={About} />
-      </div>
+        <Route path="/contact" component={Contact} />
+      </Div>
     </Router>
   );
 }

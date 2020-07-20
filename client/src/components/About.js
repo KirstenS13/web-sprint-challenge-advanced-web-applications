@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const team = [
     {
@@ -13,24 +14,33 @@ const team = [
     }
 ];
 
+const Div = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+
+    background-color: ${props => props.primary ? "transparent" : "thistle" };
+`;
+
 const About = () => {
     return (
-        <>
+        <Div>
             <h2>About the Bubble App</h2>
             <p>Easily keep track of your favorite colors with fun, aesthetically-pleasing bubbles.</p>
             <h3>Our Mission</h3>
-            <p>To fill the world with bubble of color.</p>
+            <p>To fill the world with bubbles of color.</p>
             <h3>Our Team</h3>
             {team.map(person => {
                 return (
-                    <>
+                    <Div>
                         <h4>{person.name}</h4>
                         <p>{person.name} loves {person.loves}</p>
                         <p>Email {person.name} at {person.email}</p>
-                    </>
+                    </Div>
                 )
             })}
-        </>
+        </Div>
     )
 };
 
