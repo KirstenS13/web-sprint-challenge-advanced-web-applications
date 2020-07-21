@@ -1,14 +1,4 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
-
-const Div = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    padding: 10px;
-
-    background-color: ${props => props.primary ? "transparent" : "thistle" };
-`;
 
 const ContactForm = () => {
     const [formState, setFormState] = useState({
@@ -31,7 +21,7 @@ const ContactForm = () => {
     }
 
     return (
-        <Div>
+        <>
             <p>Have a question?</p>
             <p>Contact us!</p>
             <form onSubmit={submit}>
@@ -61,7 +51,7 @@ const ContactForm = () => {
                 />
                 <button>Submit</button>
             </form>
-        </Div>
+        </>
     );
 };
 

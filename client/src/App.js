@@ -9,13 +9,14 @@ import "./styles.scss";
 //stretch
 import About from './components/About';
 import Contact from './components/Contact';
-import styled from 'styled-components';
+//import styled from 'styled-components';
 
-const Div = styled.div`
+/* const Div = styled.div`
     display: flex;
     flex-direction: column;
+    
     margin: auto;
-    padding: 10px;
+    padding: ${props => props.primary ? "0" : "10px" };
 
     background-color: ${props => props.primary ? "transparent" : "thistle" };
 `;
@@ -23,19 +24,19 @@ const Div = styled.div`
 const Nav = styled.nav`
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
+  width: 50%;
   margin: 20px auto;
-`
+` */
 
 function App() {
   return (
     <Router>
-      <Div primary className="App">
-        <Nav className="navbar">
-          <Link to="/about" style={{ textDecoration: "none" }}>About Us</Link>
-          <Link to="/contact" style={{ textDecoration: "none" }}>Contact Us</Link>
-          <Link to="/bubble-page" style={{ textDecoration: "none" }}>Your Bubbles</Link>
-        </Nav>
+      <div primary className="App">
+        <nav className="navbar">
+          <Link to="/about" style={{ textDecoration: "none", padding: "10px" }}>About Us</Link>
+          <Link to="/contact" style={{ textDecoration: "none", padding: "10px" }}>Contact Us</Link>
+          <Link to="/bubble-page" style={{ textDecoration: "none", padding: "10px" }}>Your Bubbles</Link>
+        </nav>
         <Route exact path="/" component={Login} />
         {/* 
           Build a PrivateRoute component that will 
@@ -45,7 +46,7 @@ function App() {
         {/* stretch goal */}
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
-      </Div>
+      </div>
     </Router>
   );
 }
