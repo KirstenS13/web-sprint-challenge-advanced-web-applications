@@ -28,6 +28,19 @@ const Nav = styled.nav`
   margin: 20px auto;
 ` */
 
+// the reason it was taking so long to do "git add ." was because there was no .gitignore file
+// git was tracking all the tens of thousands of node modules
+// .gitignore is not related to JS
+
+// If there is no .gitignore & you have not started coding yet, add a .gitignore
+
+// If there is no .gitignore & you have started coding, cancel any servers or watchers
+// * delete the node modules files
+// * commit the delete to git
+// * create a .gitignore
+// * reinstall the dependencies
+// * this will remove all the node module files from the git repository (you really do not want all those in there)
+
 function App() {
   return (
     <Router>
